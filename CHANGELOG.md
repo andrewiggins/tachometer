@@ -7,6 +7,11 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 <!-- ## Unreleased -->
 
+### Fixed
+
+-   Fix bug where the `measurementExpression` setting was not being respected
+    when passed via the config file (vs the command line flag).
+
 ## [0.4.14] 2019-11-05
 
 ### Added
