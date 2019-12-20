@@ -187,6 +187,7 @@ function chromeOpts(config: BrowserConfig): chrome.Options {
 
 function firefoxOpts(config: BrowserConfig): firefox.Options {
   const opts = new firefox.Options();
+  opts.setPreference('layout.css.shadow-parts.enabled', true);
   if (config.binary) {
     opts.setBinary(config.binary);
   }
