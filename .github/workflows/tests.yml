@@ -11,12 +11,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        job: [linux-node-latest]
+        job: [linux-node-latest, mac]
         include:
           - job: linux-node-latest
             os: ubuntu-latest
             node: 14.x
             browsers: chrome, chrome-headless, firefox, firefox-headless
+
+          - job: mac
+            os: macos-latest
+            node: 14.x
+            browsers: safari
 
     runs-on: ${{ matrix.os }}
 
